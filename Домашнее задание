@@ -1,0 +1,299 @@
+Задание 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="post1.php" method="POST">
+             <label>Введите положительное число:</label><br>
+             <input type="number" name="p" placeholder="положительное число">
+             <br><br>   
+             <br>
+        <input type="submit" value="Send">
+     </form>             
+</body>
+</html>
+
+<?php
+$p=$_POST['p'];
+if($p>0)
+{
+    echo "$p<br>";
+}
+else if($p<0)
+{
+    echo "Число $p отрицательное<br>";
+}
+else
+{
+    echo "$p=0<br>";
+}
+?>
+
+
+Задание 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form action="post2.php" method="POST">
+     <label>Квартал года:</label><br>
+             <input type="number" name="god" placeholder="Номер месяца">
+             <br><br>   
+             <br>
+        <input type="submit" value="Send">
+     </form>
+</body>
+</html>
+
+
+
+<?php
+$god=$_POST['god'];
+if($god==1)
+{
+    echo "Январ<br>";
+}
+else if($god==2)
+{
+    echo "Февраль<br>";
+}
+else if($god==3)
+{
+    echo "Март<br>";
+}
+else if($god==4)
+{
+    echo "Апрель<br>";
+}
+else if($god==5)
+{
+    echo "Май<br>";
+}
+else if($god==6)
+{
+    echo "Июнь<br>";
+}
+else if($god==7)
+{
+    echo "Июль<br>";
+}
+else if($god==8)
+{
+    echo "<br>Август";
+}
+else if($god==9)
+{
+    echo "<br>Сентябрь";
+}
+else if($god==10)
+{
+    echo "<br> Октябр";
+}
+else if($god==11)
+{
+    echo "<br> Ноябр";
+}
+else if($god==12)
+{
+    echo "<br>Декабр";
+}
+?>
+
+
+Задание 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post3.php" method="POST">
+    <label>Делите 1число на 2число:</label><br>
+            <label>A:</label><br>
+            <input type="number" name="a" placeholder="1число"><br>
+            <label>B:</label><br>
+            <input type="number" name="b" placeholder="2число"><br>
+            <br><br>
+            <br>
+            <input type="submit" value="Send">
+    </form>
+</body>
+</html>
+
+<?php
+$a=$_POST['a'];
+$b=$_POST['b'];
+$c=$a/$b;
+    echo "<br>$a делит нa $b равно = $c";
+
+?>
+
+Задание 4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="post4.php" method="POST">
+<label>Сколько вам лет:</label><br>
+        <input type="number" name="sol" placeholder="возраст"><br>
+        <br><br>
+        <br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
+
+<?php
+$sol=$_POST['sol'];
+if(($sol<13) && ($sol>0)) 
+{
+    echo "<br>$sol детсад <br>";
+}
+else if(($sol>12) && ($sol<21))
+{
+    echo "<br>$sol подросток <br>";
+}
+else if(($sol>21) && ($sol<68))
+{
+    echo "<br>$sol взрослый <br>";
+}
+else if(($sol>68) && ($sol<140))
+{
+    echo "<br>$sol пожилой <br>";
+}
+
+?>
+
+Задание 5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <form action="post5.php" method="POST">
+      <label>Времена года:</label><br>
+              <input type="number" name="so" placeholder="время года"><br>
+              <br>
+              <input type="submit" value="Send">
+      </form>
+</body>
+</html>
+
+<?php
+$so=$_POST['so'];
+if(($so>=3) && ($so<=5))
+{
+    echo "Весна";
+}
+else if(($so>=6) && ($so<=8))
+{
+    echo "Лето";
+}
+else if(($so>=9) && ($so<=11))
+{
+    echo "Осен";
+}
+else if(($so==12) && ($so==1) && ($so==2))
+{
+    echo "Зима";
+}
+?>
+
+Задание 6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="post6.php" method="GET">
+<label>Введите свойо имя:</label><br>
+             <input type="text" name="r" placeholder="имя">
+             <br><br>   
+             <br>
+        <input type="submit" value="Send">
+</form>
+</body>
+</html>
+
+<?php
+$r=$_GET['r'];
+{
+    echo "<br>Привет, $r!<br>";
+}
+?>
+
+
+Задание 7
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="post7.php" method="POST">
+                <label for="">Логин</label><br>
+                <input type="email" name="login"><br>
+                <label for="">Пароль</label><br>
+                <input type="password" name="password">
+                <br><br>   
+             <br>
+        <input type="submit" value="Send">
+</body>
+</html>
+
+<?php
+$login = $_POST['login'];
+$password = $_POST['password'];
+
+// Проверяем логин и пароль
+if ($login === 'user' && $password === 'password') {
+    echo 'Авторизация успешна!';
+} else {
+    echo 'Неверный логин или пароль';
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
