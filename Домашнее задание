@@ -277,7 +277,77 @@ if ($login === 'user' && $password === 'password') {
 
 
 
+Задание 8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="post8.php" method="GET"> 
+<label>Получаем числа из URL</label><br>
+        <input type="number" name="num1" placeholder="число"><br>
+        <br><br>
+        <br>
+        <label>Проверяем, что оба числа были переданы</label><br>
+        <input type="number" name="num2" placeholder="число"><br>
+        <br><br>
+        <br>
+        <input type="submit" value="Send">
+</form>
+</body>
+</html>
 
+<?php
+
+$num1 = $_GET['num1'];
+$num2 = $_GET['num2'];
+
+
+if(isset($num1) && isset($num2)){
+    
+    $result = (int)$num1 + (int)$num2;
+    
+    
+    echo "Результат сложения чисел $num1 и $num2: $result";
+} else {
+   
+    echo "Ошибка: Не все числа были переданы";
+}
+?>ы
+
+
+Задание 9
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="post9.php" method="GET"> 
+<label>Ведите свой возрасть</label><br>
+        <input type="number" name="age" placeholder="число"><br>
+        <br><br>
+        <br>
+        <input type="submit" value="Send">
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_GET['age'])) {
+    $age = $_GET['age'];
+    if($age > 18) {
+        echo "Доступ разрешен";
+    } else {
+        echo "Доступ запрещен";
+    }
+}
+?>
 
 
 
